@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	header.header
+		div#timer.timer
+		div.user
+			img.user-img(src="images/user.png")
+		div.input
+			a(href="/edit") &#xe667;
+	div.bd
+		each val in talks
+			div.talk
+				div.talk-left= val.time
+				div.talk-right= val.text
+				div(style="clear:both")
+		
+
+	script(src="/javascripts/main.js")
+	script index.init()
+

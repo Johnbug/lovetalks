@@ -1,0 +1,181 @@
+html,body{
+    margin:0;
+    height: 100%;
+}
+
+.header{
+    height: 200px;
+    width: 100%;
+    background-image: url("../images/header.png");
+    position: relative;
+    font-family: 'pacifico'
+}
+.timer{
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    width: 100px;
+    color: #855595;
+    font-size: 1.4em;
+
+}
+
+.bd{
+    position: relative;
+    width: 100%;
+    padding-top: 35px;
+    background-color: rgba(0,0,0,0.015);
+}
+
+.user{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    position: absolute;
+    left: 220px;
+    top:100%;
+    margin-top: -30px;
+    overflow: hidden;
+}
+.user-img{
+    width: 100%;
+}
+
+.input{
+    font-family: 'iconfont';
+    color: #777;
+    font-size: 1.5em;
+    position: absolute;
+    left: 280px;
+    top: 10px;
+}
+.input a{
+    color: #777;
+    text-decoration: none;
+}
+
+.talk{
+    width: 100%;
+    -webkit-box-sizing:border-box;
+    padding: 10px 20px;
+    border-top:1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px; 
+    min-height: 60px;
+    background-color:#fff; 
+}
+
+.talk-left{
+    width: 20%;
+    float: left;
+    -webkit-box-sizing:border-box;
+    border-right: 1px solid #f1f1f1; 
+    padding: 10px 0;
+    color: #aaa;
+
+}
+.talk-right{
+    width: 80%;
+    float: right;
+    color: #565656;
+    padding-left: 20px;
+    -webkit-box-sizing:border-box;
+    font-size: 0.8em;
+}
+
+@font-face{
+    font-family: 'pacifico';
+    src : url("Pacifico.ttf");
+}
+
+@font-face{
+    font-family: 'yuehei';
+    src : url("yuehei.otf");
+}
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.login-container{
+    height: 100%;
+    width: 100%;
+    background-color:#f1f1f1; 
+    position: relative;
+}
+
+.login-logo{
+    height: 220px;
+    text-align: center;
+    line-height: 180px;
+    font-size: 6em;
+    font-family: 'yuehei';
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    left: 0;
+    background-image: url("../images/logo.png");
+    color: #fff;
+}
+.login-action{
+    height: 248px;
+    background-color: #fff;
+    position: absolute;
+    top: 320px;
+    left: 0;
+    width: 100%;
+    box-sizing:border-box;
+    padding: 20px 30px;
+}
+
+.login-action input{
+    width: 100%;
+    border: 1px solid #f1f1f1;
+    
+    margin-top: 10px;
+    font-size: 1.2em;
+    padding: 10px;
+    box-sizing:border-box;
+}
+.login-btn{
+    background-color: #3498DB;
+    color: #fff;
+}
+
+.edit-header{
+    background-color: #fafafa;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    box-sizing:border-box;
+}
+
+.edit-return{
+    color: #aaa;
+    float: left;
+    text-decoration: none;
+}
+
+.edit-post{
+    color: #1ABC9C;
+    float:right;
+    text-decoration: none;
+    border:none;
+    background-color: #fafafa;
+    font-size: 1.1em;
+}
+
+.talk-edit{
+    width: 100%;
+    box-sizing:border-box;
+    border: 1px solid #eee;
+    height: 200px;
+}
+.edit-container{
+    padding: 10px 12px;
+    box-sizing:border-box;
+}

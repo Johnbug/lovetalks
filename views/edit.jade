@@ -1,0 +1,9 @@
+extends layout
+block content
+	form(method="post" action="/edit")
+		header.edit-header
+			a.edit-return(href="/") 返回首页
+			input.edit-post(type="submit" value="发送") 
+			div(style="clear:both")
+		div.edit-container
+			textarea.talk-edit(name="text")
