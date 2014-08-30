@@ -15,7 +15,7 @@ router.post("/",function(req,res){
 		"time": dateFormat(new Date()),
 		"text": req.body.text
 	}
-	console.log(item);
+	//console.log(item);
 	talk.edit(item).then(function(data){
 		if(data){
 			res.redirect("/");

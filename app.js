@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ secret: 'johnbug', cookie: { maxAge: 60000 }}))
+app.use(session({ secret: 'johnbug', cookie: { maxAge: 60000*60*24 }}))
 
 
 app.use('/', routes);

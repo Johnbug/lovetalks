@@ -4,13 +4,19 @@ block content
 	header.header
 		div#timer.timer
 		div.user
-			img.user-img(src="images/user.png")
+			img.user-img(src=user)
 		div.input
 			a(href="/edit") &#xe667;
 	div.bd
 		each val in talks
 			div.talk
-				div.talk-left= val.time
+				div.talk-left
+					span= val.time
+					br
+					if val.uid == 1
+						span 老公
+					else
+						span 老婆
 				div.talk-right= val.text
 				div(style="clear:both")
 		

@@ -6,8 +6,7 @@ router.get('/', function(req, res) {
 	if(req.session.username){
 			talk.getTalks().then(function(re){
 				
-				console.log(re);
-				res.render('index', { title: '爱·说',talks : re});
+				res.render('index', { title: '爱·说',talks : re,user : '/images/'+req.session.username+".png"});
 			},function(err){
 
 			})
