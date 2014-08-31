@@ -15,8 +15,8 @@ router.get('/', function(req, res) {
  					//console.log(urlArr);
  					for(var inner in urlArr){
  						var w = urlArr[inner];
- 						//console.log(w);
- 						var replacew = '<a href="'+w+'">'+w+'</a>';
+ 						
+ 						var replacew = '<a href="'+w+'">'+'link'+'</a>';
  						//console.log(replacew);
  						re[v].text = re[v].text.replace(w,replacew);
  						//console.log(re[v].text);
