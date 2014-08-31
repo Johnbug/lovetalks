@@ -3,8 +3,8 @@ var router = express.Router();
 var talk = require("../models/db_talk");
 /* GET home page. */
 
-var urlReg=/^((http|https|ftp):\/\/)?(\w(\:\w)?@)?([0-9a-z_-]+\.)*?([a-z0-9-]+\.[a-z]{2,6}(\.[a-z]{2})?(\:[0-9]{2,6})?)((\/[^?#<>\/\\*":]*)+(\?[^#]*)?(#.*)?)?$/g;    
-
+var urlReg=/http:\/\/.+\s[\w\u4e00-\u9fa5]+?\s/g;  
+var httpReg = /http:\/\/.+?\s/g;
 router.get('/', function(req, res) {
 	if(req.session.username){
 			talk.getTalks().then(function(re){
@@ -12,16 +12,18 @@ router.get('/', function(req, res) {
 					var p = re[v];
 					
  					var urlArr = re[v].text.match(urlReg);
- 					//console.log(urlArr);
+ 					console.log(urlArr);
  					for(var inner in urlArr){
  						var w = urlArr[inner];
- 						
- 						var replacew = '<a href="'+w+'">'+'link'+'</a>';
+ 						var tmp = w.match(httpReg)[0];
+ 						var word = w.substr(tmp.length,w.length-1);
+ 						var replacew = '<a href="'+tmp+'">'+word+'</a>';
  						//console.log(replacew);
  						re[v].text = re[v].text.replace(w,replacew);
- 						//console.log(re[v].text);
+ 						console.log(re[v].text);
  					}
 				}
+				console.log(re);
 				res.render('index', { title: '爱·说',talks : re,user : '/images/'+req.session.username+".png"});
 			},function(err){
 
